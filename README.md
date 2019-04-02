@@ -1,34 +1,48 @@
-# indexIsValid(index, arrayLength): boolean
+# getIndexesOfAllDuplicates(array): number[]
 
-Returns true or false based on whether or not `index` can exist in `arrayLength`.  
-`index` can be negative or positive.
+Returns indexes of every duplicate instance of each item in `array`.  
+Any item in `array` that is object will be considered unique.  
+Will not work if array contains null or undefined.
 
 ## Examples
-```
-indexIsValid(1, 2); // --> true
+```ts
+let arr = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4];
+getIndexesOfAllDuplicates(arr);
+// --> [4, 5, 6, 7, 8, 9, 10, 11]
 
-indexIsValid(2, 2); // --> false
+arr = [ [1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4] ];
+getIndexesOfAllDuplicates(arr);
+// --> [2, 3, 4, 5]
 
-indexIsValid(-2, 2); // --> true
+arr = [ [1, 2, 'r'], [3, 4], [1, 2], [3, 4], [1, 2, 'r'], [3, 4] ];
+getIndexesOfAllDuplicates(arr);
+// --> [3, 4, 5]
 
-indexIsValid(-3, 2); // --> false
+// Any objects, even if identical, are considered unique:
+arr = [ {prop: 1}, {prop: 1} ];
+getIndexesOfAllDuplicates(arr);
+// --> []
 
-indexIsValid(1, 1); // --> false
+arr = [ [1, 2, {prop: 1}], [3, 4], [1, 2], [3, 4], [1, 2, {prop: 1}] ];
+getIndexesOfAllDuplicates(arr);
+// --> [3]
 
-indexIsValid(-1, 1); // --> true
-
-indexIsValid(1, 0); // console: "Error:  Input must be an integer greater than zero"
+// The function won't work with null or undefined:
+arr = [null, [3, 4], null, false, [1, 2], [1, 4], false];
+getIndexesOfAllDuplicates(arr);
+// Error: "Input must be either a primitive type or an array"
 ```
 
 ## Installation
-`npm install  @writetome51/index-is-valid`
+`npm install  @writetome51/get-indexes-of-all-duplicates`
 
 ## Loading
 ```
 // if using TypeScript:
-import { indexIsValid } from '@writetome51/index-is-valid';
+import { getIndexesOfAllDuplicates } from '@writetome51/get-indexes-of-all-duplicates';
 // if using ES5 JavaScript:
-var indexIsValid = require('@writetome51/index-is-valid').indexIsValid;
+var getIndexesOfAllDuplicates = 
+    require('@writetome51/get-indexes-of-all-duplicates').getIndexesOfAllDuplicates;
 ```
 
 ## License

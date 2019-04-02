@@ -1,1 +1,1 @@
-export declare function getIndexesOfDuplicates(array: any[]): number[];
+export declare function getIndexesOfAllDuplicates(array: any[]): number[];

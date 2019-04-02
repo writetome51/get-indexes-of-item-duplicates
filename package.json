@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/get-indexes-of-duplicates",
+  "name": "@writetome51/get-indexes-of-all-duplicates",
   "version": "1.0.0",
-  "description": "Function returns indexes of duplicated array items.",
+  "description": "Function returns indexes of all duplicated array items.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,23 +9,28 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/get-indexes-of-duplicates.git"
+    "url": "git+https://github.com/writetome51/get-indexes-of-all-duplicates.git"
   },
   "keywords": [
     "array",
+    "find",
+    "every",
+    "all",
+    "duplicate",
+    "item",
+    "element",
     "index",
-    "exists",
-    "valid",
-    "validation",
-    "validator"
+    "indexes"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/get-indexes-of-duplicates/issues"
+    "url": "https://github.com/writetome51/get-indexes-of-all-duplicates/issues"
   },
-  "homepage": "https://github.com/writetome51/get-indexes-of-duplicates#readme",
-  "devDependencies": {},
+  "homepage": "https://github.com/writetome51/get-indexes-of-all-duplicates#readme",
+  "devDependencies": {
+    "@writetome51/arrays-match": "~1.0.5"
+  },
   "dependencies": {
     "error-if-not-populated-array": "~1.0.1",
     "@writetome51/not": "~1.0.5",
