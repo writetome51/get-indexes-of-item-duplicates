@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-indexes-of-all-duplicates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Function returns indexes of all duplicated array items.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
