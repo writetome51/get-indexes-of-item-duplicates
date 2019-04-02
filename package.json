@@ -1,0 +1,34 @@
+{
+  "name": "@writetome51/get-indexes-of-duplicates",
+  "version": "1.0.0",
+  "description": "Function returns indexes of duplicated array items.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/get-indexes-of-duplicates.git"
+  },
+  "keywords": [
+    "array",
+    "index",
+    "exists",
+    "valid",
+    "validation",
+    "validator"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/writetome51/get-indexes-of-duplicates/issues"
+  },
+  "homepage": "https://github.com/writetome51/get-indexes-of-duplicates#readme",
+  "devDependencies": {},
+  "dependencies": {
+    "error-if-not-populated-array": "~1.0.1",
+    "@writetome51/not": "~1.0.5",
+    "@writetome51/array-has": "~1.0.7"
+  }
+}
