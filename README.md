@@ -1,48 +1,48 @@
-# getIndexesOfAllDuplicates(array): number[]
+# getIndexesOfItemDuplicates(value, array): number[]
 
-Returns indexes of every duplicate instance of each item in `array`.  
-Any item in `array` that is object will be considered unique.  
-Will not work if array contains null or undefined.
+Returns indexes of every duplicate instance of `value` in `array`.  
+Will not work if `value` is object or array that contains object.  
+Errors if value is null or undefined.
 
 ## Examples
 ```ts
 let arr = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4];
-getIndexesOfAllDuplicates(arr);
-// --> [4, 5, 6, 7, 8, 9, 10, 11]
+getIndexesOfItemDuplicates(1, arr);
+// --> [4, 8]
 
 arr = [ [1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4] ];
-getIndexesOfAllDuplicates(arr);
-// --> [2, 3, 4, 5]
+getIndexesOfItemDuplicates( [1, 2], arr);
+// --> [2, 4]
 
-arr = [ [1, 2, 'r'], [3, 4], [1, 2], [3, 4], [1, 2, 'r'], [3, 4] ];
-getIndexesOfAllDuplicates(arr);
-// --> [3, 4, 5]
+arr = [ [1, 2, 'r'], [1, 2], [3, 4], [1, 2, 'r'], [3, 4] ];
+getIndexesOfItemDuplicates([1, 2, 'r'], arr);
+// --> [3]
 
 // Any objects, even if identical, are considered unique:
 arr = [ {prop: 1}, {prop: 1} ];
-getIndexesOfAllDuplicates(arr);
+getIndexesOfItemDuplicates({prop: 1}, arr);
 // --> []
 
 arr = [ [1, 2, {prop: 1}], [3, 4], [1, 2], [3, 4], [1, 2, {prop: 1}] ];
-getIndexesOfAllDuplicates(arr);
+getIndexesOfItemDuplicates(arr);
 // --> [3]
 
 // The function won't work with null or undefined:
 arr = [null, [3, 4], null, false, [1, 2], [1, 4], false];
-getIndexesOfAllDuplicates(arr);
+getIndexesOfItemDuplicates(arr);
 // Error: "Input must be either a primitive type or an array"
 ```
 
 ## Installation
-`npm install  @writetome51/get-indexes-of-all-duplicates`
+`npm install  @writetome51/get-indexes-of-Item-duplicates`
 
 ## Loading
 ```
 // if using TypeScript:
-import { getIndexesOfAllDuplicates } from '@writetome51/get-indexes-of-all-duplicates';
+import { getIndexesOfItemDuplicates } from '@writetome51/get-indexes-of-Item-duplicates';
 // if using ES5 JavaScript:
-var getIndexesOfAllDuplicates = 
-    require('@writetome51/get-indexes-of-all-duplicates').getIndexesOfAllDuplicates;
+var getIndexesOfItemDuplicates = 
+    require('@writetome51/get-indexes-of-Item-duplicates').getIndexesOfItemDuplicates;
 ```
 
 ## License

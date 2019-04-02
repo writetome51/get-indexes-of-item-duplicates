@@ -1,7 +1,7 @@
 {
-  "name": "@writetome51/get-indexes-of-all-duplicates",
-  "version": "1.0.1",
-  "description": "Function returns indexes of all duplicated array items.",
+  "name": "@writetome51/get-indexes-of-item-duplicates",
+  "version": "1.0.0",
+  "description": "Function returns indexes of duplicates of one item in array.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/get-indexes-of-all-duplicates.git"
+    "url": "git+https://github.com/writetome51/get-indexes-of-item-duplicates.git"
   },
   "keywords": [
     "array",
@@ -25,15 +25,14 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/get-indexes-of-all-duplicates/issues"
+    "url": "https://github.com/writetome51/get-indexes-of-item-duplicates/issues"
   },
-  "homepage": "https://github.com/writetome51/get-indexes-of-all-duplicates#readme",
+  "homepage": "https://github.com/writetome51/get-indexes-of-item-duplicates#readme",
   "devDependencies": {
     "@writetome51/arrays-match": "~1.0.5"
   },
   "dependencies": {
-    "error-if-not-populated-array": "~1.0.1",
-    "@writetome51/not": "~1.0.5",
-    "@writetome51/array-has": "~1.0.7"
+    "@writetome51/array-get-indexes": "~1.0.1",
+    "@writetome51/array-remove-head-tail": "~1.0.4"
   }
 }

@@ -1,19 +1,12 @@
-import { arrayHas } from '@writetome51/array-has';
-import { errorIfNotPopulatedArray } from 'error-if-not-populated-array';
-import { not } from '@writetome51/not';
+import { getIndexesOf } from '@writetome51/array-get-indexes';
+import { removeHead } from '@writetome51/array-remove-head-tail';
 
 
+// Returns indexes of every duplicate instance of `value`.
+// If `value` is object or array that contains object, this will always return empty array.
 
-// Returns indexes of every duplicate instance of each array item.
-// Any item in array that is object will be considered unique.
-
-export function getIndexesOfAllDuplicates(array): number[] {
-	errorIfNotPopulatedArray(array);
-
-	for (var indexes = [], uniqueItems = [], i = 0; i < array.length; ++i) {
-
-		if (not(arrayHas(array[i], uniqueItems))) uniqueItems.push(array[i]);
-		else indexes.push(i);
-	}
+export function getIndexesOfItemDuplicates(value, array): number[] {
+	let indexes = getIndexesOf(value, array);
+	removeHead(1, indexes); // We want everything after the first item.
 	return indexes;
 }
