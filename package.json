@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "@writetome51/array-get-indexes": "~1.0.1",
-    "@writetome51/array-remove-head-tail": "~1.0.4"
+    "@writetome51/array-remove-head-tail": "~1.0.4",
+    "basic-data-handling": "~1.0.15"
   }
 }

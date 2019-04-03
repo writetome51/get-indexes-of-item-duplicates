@@ -29,10 +29,15 @@ else console.log('test 4 FAILED');
 
 arr = [11, '', false, true, 'aaa', false, true, false, 1, 2];
 
+
 indexes = getIndexesOfItemDuplicates('a', arr);
-if (Array.isArray(indexes) && arraysMatch(indexes, [5,7])) console.log('test 5 passed');
+if (arraysMatch(indexes, [])) console.log('test 5 passed');
 else console.log('test 5 FAILED');
 
+
+indexes = getIndexesOfItemDuplicates(false, arr);
+if (arraysMatch(indexes, [5, 7])) console.log('test 6 passed');
+else console.log('test 6 FAILED');
 
 
 arr = [{}, {}];
@@ -42,8 +47,11 @@ try {
 } catch (e) {
 	errorTriggered = true;
 }
-if (errorTriggered) console.log('test 5 passed');
-else console.log('test 5 FAILED');
+if (errorTriggered) console.log('test 7 passed');
+else console.log('test 7 FAILED');
 
 
-
+arr = [9, null, 1, null];
+indexes = getIndexesOfItemDuplicates(1, arr);
+if (arraysMatch(indexes, [])) console.log('test 8 passed');
+else console.log('test 8 FAILED');

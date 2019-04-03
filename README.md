@@ -1,8 +1,8 @@
 # getIndexesOfItemDuplicates(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): number[]
 
 Returns indexes of every duplicate instance of `value` in `array`.  
-Errors if `value` is object, array that contains object, 
-null, or undefined.
+It errors if `value` is an object, null, undefined, or an array that contains  
+an object.
 
 ## Examples
 ```ts
