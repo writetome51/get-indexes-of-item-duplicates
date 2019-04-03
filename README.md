@@ -10,11 +10,15 @@ let arr = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4];
 getIndexesOfItemDuplicates(1, arr);
 // --> [4, 8]
 
+arr = ['aaa', 'a', 'aa', 'aa', 'aaaa', 'a', 'aa'];
+getIndexesOfItemDuplicates('a', arr);
+// --> [5]
+
 arr = [ [1, 2], [3, 4], [1, 2], [3, 4], [1, 2], [3, 4] ];
 getIndexesOfItemDuplicates( [1, 2], arr);
 // --> [2, 4]
 
-arr = [ [1, 2, 'r'], [1, 2], [3, 4], [1, 2, 'r'], [3, 4] ];
+arr = [ [1, 2], [1, 2, 'r'], [3, 4], [1, 2, 'r'], [3, 4] ];
 getIndexesOfItemDuplicates([1, 2, 'r'], arr);
 // --> [3]
 
@@ -22,15 +26,6 @@ getIndexesOfItemDuplicates([1, 2, 'r'], arr);
 arr = [ {prop: 1}, {prop: 1} ];
 getIndexesOfItemDuplicates({prop: 1}, arr);
 //  Error: "Input must be either a primitive type or an array"
-
-arr = [ [1, 2, {prop: 1}], [3, 4], [1, 2], [3, 4], [1, 2, {prop: 1}] ];
-getIndexesOfItemDuplicates(arr);
-// --> [3]
-
-// The function won't work with null or undefined:
-arr = [null, [3, 4], null, false, [1, 2], [1, 4], false];
-getIndexesOfItemDuplicates(arr);
-// Error: "Input must be either a primitive type or an array"
 ```
 
 ## Installation
@@ -39,10 +34,12 @@ getIndexesOfItemDuplicates(arr);
 ## Loading
 ```
 // if using TypeScript:
-import { getIndexesOfItemDuplicates } from '@writetome51/get-indexes-of-item-duplicates';
+import { getIndexesOfItemDuplicates } 
+    from '@writetome51/get-indexes-of-item-duplicates';
 // if using ES5 JavaScript:
 var getIndexesOfItemDuplicates = 
-    require('@writetome51/get-indexes-of-item-duplicates').getIndexesOfItemDuplicates;
+    require('@writetome51/get-indexes-of-item-duplicates')
+    .getIndexesOfItemDuplicates;
 ```
 
 ## License
