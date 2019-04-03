@@ -1,8 +1,8 @@
-# getIndexesOfItemDuplicates(value, array): number[]
+# getIndexesOfItemDuplicates(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;value,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): number[]
 
 Returns indexes of every duplicate instance of `value` in `array`.  
-Will not work if `value` is object or array that contains object.  
-Errors if value is null or undefined.
+Errors if `value` is object, array that contains object, 
+null, or undefined.
 
 ## Examples
 ```ts
@@ -18,10 +18,10 @@ arr = [ [1, 2, 'r'], [1, 2], [3, 4], [1, 2, 'r'], [3, 4] ];
 getIndexesOfItemDuplicates([1, 2, 'r'], arr);
 // --> [3]
 
-// Any objects, even if identical, are considered unique:
+// Errors if value is object:
 arr = [ {prop: 1}, {prop: 1} ];
 getIndexesOfItemDuplicates({prop: 1}, arr);
-// --> []
+//  Error: "Input must be either a primitive type or an array"
 
 arr = [ [1, 2, {prop: 1}], [3, 4], [1, 2], [3, 4], [1, 2, {prop: 1}] ];
 getIndexesOfItemDuplicates(arr);
@@ -34,15 +34,15 @@ getIndexesOfItemDuplicates(arr);
 ```
 
 ## Installation
-`npm install  @writetome51/get-indexes-of-Item-duplicates`
+`npm install  @writetome51/get-indexes-of-item-duplicates`
 
 ## Loading
 ```
 // if using TypeScript:
-import { getIndexesOfItemDuplicates } from '@writetome51/get-indexes-of-Item-duplicates';
+import { getIndexesOfItemDuplicates } from '@writetome51/get-indexes-of-item-duplicates';
 // if using ES5 JavaScript:
 var getIndexesOfItemDuplicates = 
-    require('@writetome51/get-indexes-of-Item-duplicates').getIndexesOfItemDuplicates;
+    require('@writetome51/get-indexes-of-item-duplicates').getIndexesOfItemDuplicates;
 ```
 
 ## License
