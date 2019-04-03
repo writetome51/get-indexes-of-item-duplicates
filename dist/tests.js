@@ -25,6 +25,12 @@ if (arrays_match_1.arraysMatch(indexes, [3]))
     console.log('test 4 passed');
 else
     console.log('test 4 FAILED');
+arr = [11, '', false, true, 'aaa', false, true, false, 1, 2];
+indexes = index_1.getIndexesOfItemDuplicates('a', arr);
+if (Array.isArray(indexes) && arrays_match_1.arraysMatch(indexes, [5, 7]))
+    console.log('test 5 passed');
+else
+    console.log('test 5 FAILED');
 arr = [{}, {}];
 var errorTriggered = false;
 try {
