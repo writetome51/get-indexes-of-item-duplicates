@@ -40,6 +40,12 @@ if (arraysMatch(indexes, [5, 7])) console.log('test 6 passed');
 else console.log('test 6 FAILED');
 
 
+arr = [11, [1], 1, false, [1], '', [1], 'j'];
+indexes = getIndexesOfItemDuplicates([1], arr);
+if (arraysMatch(indexes, [4, 6])) console.log('test 6A passed');
+else console.log('test 6A FAILED');
+
+
 arr = [{}, {}];
 let errorTriggered = false;
 try {
