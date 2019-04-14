@@ -1,10 +1,10 @@
 import { getIndexesOf } from '@writetome51/array-get-indexes';
 import { removeHead } from '@writetome51/array-remove-head-tail';
-import { notEmpty } from 'basic-data-handling/isEmpty_notEmpty';
+import { notEmpty } from '@writetome51/is-empty-not-empty';
 
 
 // Returns indexes of every duplicate instance of `value`.
-// If `value` is object or array that contains object, this will always return empty array.
+// It errors if `value` is an object, null, undefined, or an array that contains an object.
 
 export function getIndexesOfItemDuplicates(value, array): number[] {
 	let indexes = getIndexesOf(value, array);

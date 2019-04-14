@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/get-indexes-of-item-duplicates",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Function returns indexes of duplicates of one item in array.",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -29,11 +29,11 @@
   },
   "homepage": "https://github.com/writetome51/get-indexes-of-item-duplicates#readme",
   "devDependencies": {
-    "@writetome51/arrays-match": "~1.0.5"
+    "@writetome51/arrays-match": "~1.0.6"
   },
   "dependencies": {
-    "@writetome51/array-get-indexes": "~1.0.1",
+    "@writetome51/array-get-indexes": "~1.0.2",
     "@writetome51/array-remove-head-tail": "~1.0.4",
-    "basic-data-handling": "~1.0.15"
+    "@writetome51/is-empty-not-empty": "~1.0.0"
   }
 }

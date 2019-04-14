@@ -4,12 +4,12 @@ import { getIndexesOfItemDuplicates } from './index';
 
 let arr: any[] = [1];
 let indexes = getIndexesOfItemDuplicates(1, arr);
+
 if (arraysMatch(indexes, [])) console.log('test 1 passed');
 else console.log('test 1 FAILED');
 
 
 arr = [1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4];
-
 indexes = getIndexesOfItemDuplicates(1, arr);
 if (arraysMatch(indexes, [4, 8])) console.log('test 2 passed');
 else console.log('test 2 FAILED');
@@ -61,3 +61,4 @@ arr = [9, null, 1, null];
 indexes = getIndexesOfItemDuplicates(1, arr);
 if (arraysMatch(indexes, [])) console.log('test 8 passed');
 else console.log('test 8 FAILED');
+
